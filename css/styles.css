@@ -1,0 +1,173 @@
+@font-face {
+    font-family: Myriad Pro;
+    src: url("../fonts/MYRIADPRO-REGULAR.OTF");
+}
+
+@font-face {
+    font-family: Myriad Pro Light;
+    src: url("../fonts/MyriadPro-Light.otf");
+}
+
+@font-face {
+    font-family: Myriad Pro Bold;
+    src: url("../fonts/MYRIADPRO-BOLD.OTF");
+}
+
+body {
+    background-color: #fbfbfd;
+}
+
+#padre{
+    display: grid; 
+
+    grid-template-areas: 
+    'logo encabezado encabezado'
+    'primeraSeccion primeraSeccion primeraSeccion-imagen'
+    'segundaSeccion segundaSeccion segundaSeccion'
+    'dispositivos dispositivos dispositivos'
+    'dispositivos2 dispositivos2 dispositivos2'
+    'dispositivos3 dispositivos3 dispositivos3'
+    'service1 service1 service1'
+    'pie pie pie';
+
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
+    
+    height: 100vh;
+    overflow-x: hidden;
+}
+   
+.encabezado__menu {
+    grid-area: encabezado;
+    position: fixed;
+    right: 0%;
+    margin-top: 60px;
+    font-family: Myriad Pro;
+
+}
+
+.encabezado__logo {
+    grid-area: logo;
+    position: fixed;
+    width: 155px;
+    height: 135px;
+
+}
+
+#primeraSeccion {
+    grid-area: primeraSeccion;   
+    margin-top: 150px; 
+    position: relative;
+}
+
+.primeraSeccion_imagen { 
+    grid-area: primeraSeccion-imagen;
+    right: 0%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-right: 0px;    
+    position: absolute;
+    right: 0px;
+}
+
+#segundaSeccion {
+    grid-area: segundaSeccion;
+}
+
+#segundaSeccion > article{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    margin-left: 15px;
+
+}
+
+
+#dispos_primerSeccion {
+    grid-area: dispositivos;
+    display: flex;
+    flex-direction: row;
+    
+}
+#dispos_segunSeccion {
+    grid-area: dispositivos2;
+    display: flex;
+    flex-direction: row;
+    
+}
+#dispos_tercerSeccion {
+    grid-area: dispositivos3;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.dispos__arts{
+    padding: 35px;
+    margin: 25px;
+}
+
+.service1 {
+    grid-area: service1;
+    height: 500px;
+    width: 800px;
+    display: block;
+    margin: auto;
+    
+}
+
+#pie {
+    grid-area: pie;
+    display: flex;
+    flex-direction: row;
+    font-family: Myriad Pro Light;
+}
+
+footer{
+
+    font-family: Myriad Pro Light;
+}
+
+a:hover{
+    color:#06c
+}
+
+p{
+    font-family: Myriad Pro Light;
+    font-size: medium;
+}
+
+h2, h3, h4{
+            font-family: Myriad Pro Bold;
+            font-size: larger;
+}
+
+@media (max-width: 760px) {
+    #padre{
+        display: grid; 
+    
+        grid-template-areas: 
+        'logo encabezado'
+        'primeraSeccion'
+        'primeraSeccion' 
+        'primeraSeccion-imagen'
+        'segundaSeccion 
+        'segundaSeccion'
+        'segundaSeccion'
+        'dispositivos'
+        'dispositivos'
+        'dispositivos'
+        'dispositivos2'
+        'dispositivos2'
+        'dispositivos2'
+        'dispositivos3' 
+        'dispositivos3'
+        'dispositivos3'
+        'service1'
+        'service'
+        'service'
+        'pie'
+        'pie'
+        'pie'
+}
